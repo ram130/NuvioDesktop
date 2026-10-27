@@ -45,6 +45,10 @@ jobs:
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v6
 
+      - name: Create empty local.properties
+        shell: bash
+        run: touch local.properties
+
       - name: Install WebView2 SDK
         shell: pwsh
         run: |
